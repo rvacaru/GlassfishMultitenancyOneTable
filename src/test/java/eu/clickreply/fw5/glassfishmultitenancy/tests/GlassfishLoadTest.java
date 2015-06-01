@@ -19,6 +19,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
+ * Test Class CRUDing a simple entity into a MySQL table using a discriminator column so we can have 2 tenants.
+ * The application uses Arquillian to deploy/test the app against GlassFish 4.1
  * @author r.vacaru
  */
 public class GlassfishLoadTest extends Arquillian{
