@@ -33,7 +33,9 @@ public class TenantCtxEntityManager implements EntityManager {
 
     @EJB
     private ContextHolderBean ctxHolder;
-    
+    /**  Simulate a pull request
+     *  just for fun
+    */
     @PersistenceContext(unitName = "pu-tenant1")
     private EntityManager tenant1EntityManager;
 
