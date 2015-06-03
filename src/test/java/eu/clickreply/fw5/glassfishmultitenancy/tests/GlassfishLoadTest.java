@@ -45,6 +45,13 @@ public class GlassfishLoadTest extends Arquillian{
                 .addAsManifestResource("META-INF/beans.xml", "beans.xml") //to use for CDI beans
                 .addAsManifestResource("META-INF/persistence.xml", "persistence.xml");
     }
+    
+    @Test(enabled = true, expectedExceptions = RuntimeException.class)
+    public void testNoContextData(){
+        //No tenant is stored in Context Data map after the following line
+        ctxHolder.getContextData().remove(CURR_TENANT);
+        kidProcessor.perist(null);
+    }
 
     @Test(enabled = true)
     public void doTest() {
