@@ -8,5 +8,4 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-*.txt
-TestDurations.txt
+TestDuration*.txt
