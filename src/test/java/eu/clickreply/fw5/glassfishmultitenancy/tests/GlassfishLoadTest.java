@@ -49,7 +49,7 @@ public class GlassfishLoadTest extends Arquillian{
     @Test(enabled = true, expectedExceptions = RuntimeException.class)
     public void testNoContextData(){
         //No tenant is stored in Context Data map after the following line
-        ctxHolder.getContextData().remove(CURR_TENANT);
+        ctxHolder.remove(CURR_TENANT);
         kidProcessor.perist(null);
     }
 

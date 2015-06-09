@@ -5,7 +5,6 @@
  */
 package eu.clickreply.fw5.glassfishmultitenancy;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +23,7 @@ import javax.ejb.Singleton;
  */
 
 @Singleton
-public class ContextHolderBean implements Serializable {
+public class ContextHolderBean {
 
     private Map<String, Object> ctxData;
 
@@ -55,5 +54,9 @@ public class ContextHolderBean implements Serializable {
             put(key, value);
             return value;
         }
+    }
+
+    public Object remove(String key) {
+        return ctxData.remove(key);
     }
 }

@@ -305,8 +305,6 @@ public class TenantCtxEntityManager implements EntityManager {
      * This private method is used before every EntityManager method to get the
      * right EntityManager for the tenant from JNDI
      *
-     * @param dataSourceName which is used to lookup the related EntityManager
-     * specified in the persistence.xml units.
      * @return per tenant EntityManager
      */
     private EntityManager entityManager() {

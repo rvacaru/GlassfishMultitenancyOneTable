@@ -8,7 +8,7 @@ import javax.ejb.TransactionAttributeType;
 import javax.persistence.Query;
 
 /**
- *
+ * XXX @TransactionAttribute(TransactionAttributeType.REQUIRED) is needed for generating and executing NamedQueries
  * @author r.vacaru
  */
 
